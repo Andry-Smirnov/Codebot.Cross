@@ -19,7 +19,9 @@ type
     function Instance: Pointer;
     function Next: INode;
     function SelectNode(const XPath: string): INode;
-    function SelectList(const XPath: string): INodeList;
+//    function SelectList(const XPath: string): INodeList;
+    function SelectList(const XPath: string): INodeList; overload;
+    function SelectList(const XPath: string; out List: INodeList): Boolean; overload;
     function Force(const Path: string): INode;
     function GetDocument: IDocument; virtual;
     function GetParent: INode;
@@ -172,6 +174,26 @@ begin
     Result := nil;
   end;
 end;
+
+
+function TNode.SelectList(const XPath: string; out List: INodeList): Boolean;
+var
+  L: IXMLDOMNodeList;
+begin
+  List := nil;
+  Result := False;
+  try
+    L := FNode.selectNodes(AnsiToWide(XPath));
+    if L <> nil then
+      begin
+        List := TNodeList.Create(nil, L);
+        Result := True;
+      end;
+  except
+    List := nil;
+  end;
+end;
+
 
 function TNode.Force(const Path: string): INode;
 var
@@ -600,6 +622,12 @@ function DocumentCreate: IDocument;
 begin
   Result := TDocument.Create(CreateOleObject('Msxml2.DOMDocument') as IXMLDOMDocument);
 end;
+
+function NewDocument: IDocument;
+begin
+  Result := TDocument.Create(CreateOleObject('Msxml2.DOMDocument') as IXMLDOMDocument);
+end;
+
 {$endregion}
 {$endif}
 
