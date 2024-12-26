@@ -113,10 +113,10 @@ implementation
 uses
   WSLCLClasses
   {$ifdef gtk2gl}
-  , Codebot.Render.Controls.Gtk2;
+  , Codebot.Render.Controls.Gtk2
   {$endif}
   {$ifdef gtk3gl}
-  , Codebot.Render.Controls.Gtk3;
+  , Codebot.Render.Controls.Gtk3
   {$endif}
   {$ifdef win32gl}
   //, Codebot.Render.Controls.Windows
