@@ -40,3 +40,7 @@ examples/pandrag/pandrag
 
 # MacOS thumbnails
 .DS_Store
+
+# Lazarus
+lib/
+backup/
