@@ -21,6 +21,9 @@
           <StackChecks Value="True"/>
         </Checks>
         <VerifyObjMethodCallValidity Value="True"/>
+        <Optimizations>
+          <OptimizationLevel Value="4"/>
+        </Optimizations>
       </CodeGeneration>
       <Linking>
         <Debugging>
