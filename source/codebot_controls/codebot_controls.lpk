@@ -8,20 +8,11 @@
       <SearchPaths>
         <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
       </SearchPaths>
-      <Parsing>
-        <SyntaxOptions>
-          <IncludeAssertionCode Value="True"/>
-        </SyntaxOptions>
-      </Parsing>
-      <CodeGeneration>
-        <Checks>
-          <IOChecks Value="True"/>
-          <RangeChecks Value="True"/>
-          <OverflowChecks Value="True"/>
-          <StackChecks Value="True"/>
-        </Checks>
-        <VerifyObjMethodCallValidity Value="True"/>
-      </CodeGeneration>
+      <Other>
+        <CompilerMessages>
+          <IgnoredMessages idx6060="True" idx5026="True"/>
+        </CompilerMessages>
+      </Other>
     </CompilerOptions>
     <Files Count="22">
       <Item1>
