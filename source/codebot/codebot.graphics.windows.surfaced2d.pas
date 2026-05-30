@@ -238,6 +238,9 @@ type
     procedure SetStyle(Value: TFontStyles);
     function GetSize: Float;
     procedure SetSize(Value: Float);
+    function GetKerning: Float;
+    procedure SetKerning(Value: Float);
+
     property Name: string read GetName write SetName;
     property Color: TColorB read GetColor write SetColor;
     property Quality: TFontQuality read GetQuality write SetQuality;
@@ -1369,6 +1372,17 @@ begin
     FSize := Value;
     FFormat := nil;
   end;
+end;
+
+function TFontD2D.GetKerning: Float;
+begin
+  Result := 1;
+end;
+
+procedure TFontD2D.SetKerning(Value: Float);
+begin
+  //if Value <> then
+    //:= Value;
 end;
 
 { TBitmapBrushD2D }
