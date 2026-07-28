@@ -226,6 +226,8 @@ type
     FStyle: TFontStyles;
     FSize: Float;
     function Format: IDWriteTextFormat;
+    function GetKerning: Float;
+    procedure SetKerning(Value: Float);
   public
     constructor Create(F: TFont);
     function GetName: string;
@@ -1314,6 +1316,16 @@ begin
   if FFormat = nil then
     FFormat := CreateTextFormat(Self);
   Result := FFormat;
+end;
+
+function TFontD2D.GetKerning: Float;
+begin
+
+end;
+
+procedure TFontD2D.SetKerning(Value: Float);
+begin
+
 end;
 
 function TFontD2D.GetName: string;

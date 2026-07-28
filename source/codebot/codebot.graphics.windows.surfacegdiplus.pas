@@ -219,6 +219,8 @@ type
     FColor: TColorB;
     FQuality: TFontQuality;
     function Font: IGdiFont;
+    function GetKerning: Float;
+    procedure SetKerning(Value: Float);
   public
     constructor Create(F: TFont);
     destructor Destroy; override;
@@ -1004,6 +1006,16 @@ begin
     ReleaseDC(0, DC);
   end;
   Result := FFont;
+end;
+
+function TFontGdi.GetKerning: Float;
+begin
+
+end;
+
+procedure TFontGdi.SetKerning(Value: Float);
+begin
+
 end;
 
 function TFontGdi.GetName: string;
