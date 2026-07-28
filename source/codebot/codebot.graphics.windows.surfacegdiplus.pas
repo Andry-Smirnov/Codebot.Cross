@@ -234,8 +234,8 @@ type
     procedure SetStyle(Value: TFontStyles);
     function GetSize: Float;
     procedure SetSize(Value: Float);
-    function GetKerning: Float;
-    procedure SetKerning(Value: Float);
+    //function GetKerning: Float;
+    //procedure SetKerning(Value: Float);
 
     property Name: string read GetName write SetName;
     property Color: TColorB read GetColor write SetColor;
@@ -1006,16 +1006,6 @@ begin
     ReleaseDC(0, DC);
   end;
   Result := FFont;
-end;
-
-function TFontGdi.GetKerning: Float;
-begin
-
-end;
-
-procedure TFontGdi.SetKerning(Value: Float);
-begin
-
 end;
 
 function TFontGdi.GetName: string;
