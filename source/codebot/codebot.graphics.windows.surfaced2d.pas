@@ -240,8 +240,8 @@ type
     procedure SetStyle(Value: TFontStyles);
     function GetSize: Float;
     procedure SetSize(Value: Float);
-    function GetKerning: Float;
-    procedure SetKerning(Value: Float);
+    //function GetKerning: Float;
+    //procedure SetKerning(Value: Float);
 
     property Name: string read GetName write SetName;
     property Color: TColorB read GetColor write SetColor;
@@ -1316,16 +1316,6 @@ begin
   if FFormat = nil then
     FFormat := CreateTextFormat(Self);
   Result := FFormat;
-end;
-
-function TFontD2D.GetKerning: Float;
-begin
-
-end;
-
-procedure TFontD2D.SetKerning(Value: Float);
-begin
-
 end;
 
 function TFontD2D.GetName: string;
